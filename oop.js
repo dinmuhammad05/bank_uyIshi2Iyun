@@ -17,7 +17,7 @@ class Bank {
     static authotization(bank, email, password) {
         for (const [key, value] of bank.customers) {
             if (email === value.email && password === value.password) {
-                return key
+                return key;
             } else {
                 return false;
             }
@@ -35,7 +35,7 @@ class Bank {
                 console.log(`balanceda yetarli mablag' yo'q`);
             }
         } else {
-            console.log(`bunday mijoz topilmadi`)
+            console.log(`bunday mijoz topilmadi`);
         }
     }
 
@@ -45,12 +45,12 @@ class Bank {
             if (id) {
                 let obj = this.customers.get(id);
                 obj.balance += balance;
-                console.log(`balancedan ${balance} mablag' qo'shildi, qoldiq ${obj.balance}`)
+                console.log(`balancedan ${balance} mablag' qo'shildi, qoldiq ${obj.balance}`);
             } else {
-                console.log(`bunday mijoz topilmadi`)
+                console.log(`bunday mijoz topilmadi`);
             }
         } else {
-            console.log('xato summa kiritildi')
+            console.log('xato summa kiritildi');
         }
 
     }
@@ -61,14 +61,14 @@ class Bank {
             let obj = this.customers.get(id);
             console.log(`ismingiz:${obj.name}\nid-ingiz:${id}\nemailingiz:${obj.email}\nparolingiz:${obj.password}\nmabla'ingiz:${obj.balance}`);
         } else {
-            console.log(`bunday mijoz topilmadi`)
+            console.log(`bunday mijoz topilmadi`);
         }
     }
 }
 
-const bank = new Bank()
-bank.register('Dinmuhmmad', 555555, 'qosimovmirjalol829@gmail.com', 'q20050901')
-bank.deposite('qosimovmirjalol829@gmail.com', 'q20050901', 555556)
-bank.info('qosimovmirjalol829@gmail.com', 'q20050901')
-bank.withdrawa('qosimovmirjalol829@gmail.com', 'q20050901', 1111)
-bank.info('qosimovmirjalol829@gmail.com', 'q20050901')
+const bank = new Bank();
+bank.register('Dinmuhmmad', 555555, 'qosimovmirjalol829@gmail.com', 'q20050901');
+bank.deposite('qosimovmirjalol829@gmail.com', 'q20050901', 555556);
+bank.info('qosimovmirjalol829@gmail.com', 'q20050901');
+bank.withdrawa('qosimovmirjalol829@gmail.com', 'q20050901', 1111);
+bank.info('qosimovmirjalol829@gmail.com', 'q20050901');
